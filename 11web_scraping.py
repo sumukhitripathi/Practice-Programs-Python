@@ -9,7 +9,7 @@ url = 'https://webscraper.io/test-sites/e-commerce/allinone'
 response = requests.get(url)
 if response.status_code == 200:
     soup = BeautifulSoup(response.text, 'html.parser')
-    data = soup.find_all('p')
+    data = soup.find_all('p')    #Extract all paragraph tags
 else:    
     print(f'Failed to retrieve data from {url}. Status code: {response.status_code}')
 
